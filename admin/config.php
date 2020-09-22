@@ -1,3 +1,14 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "web_toko_online");
+
+$server = "localhost";
+$user = "root";
+$password = "";
+$nama_database = "toko_online";
+
+$db = mysqli_connect($server, $user, $password, $nama_database);
+
+if( !$db ){
+    die("Gagal terhubung dengan database: " . mysqli_connect_error());
+}
+
 ?>
